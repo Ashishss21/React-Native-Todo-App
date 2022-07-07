@@ -1,11 +1,11 @@
-import AppContainer from "./src/components/AppContainer";
-import HomeScreen from "./src/screens/HomeScreen";
+import React from 'react'
+import AppContainer from './src/components/app-container'
+import Navigator from './src/'
 
 export default function App() {
   return (
     <AppContainer>
-      <HomeScreen/>
+      <Navigator />
     </AppContainer>
-  );
+  )
 }
-
