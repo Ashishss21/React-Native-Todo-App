@@ -14,6 +14,7 @@
 
 - [SALY 3D Illustration Pack](https://www.figma.com/community/file/890095002328610853)
 - [Animated SVG stroke example by William Candillon](https://github.com/wcandillon/can-it-be-done-in-react-native/tree/master/reanimated-2/src/StrokeAnimation)
+- [Thumbz Avatar Profile Pic](https://www.figma.com/community/file/1073806079228529037)
 
 ## Setup
 

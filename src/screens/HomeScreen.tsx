@@ -1,31 +1,21 @@
-import React from "react";
-import {
-  Text,
-  Center,
-  Box,
-  VStack,
-  useColorModeValue
-} from "native-base";
-import ToggleSupport from "../components/ThemeToggle";
-import AnimatedCheckBox from "../components/animated-checkbox";
+import React from 'react'
+import { Center, VStack, Text } from 'native-base';
+import ThemeToggle from '../components/ThemeToggle';
 
 export default function HomeScreen() {
   return (
     <Center
-      _dark={{ bg: "blueGray.900" }}
-      _light={{ bg: "blueGray.100" }}
+      _dark={{ bg: 'blueGray.900' }}
+      _light={{ bg: 'blueGray.50' }}
       px={4}
       flex={1}
     >
       <VStack space={5} alignItems="center">
-        <Box w="100px" h="100px">
-          <AnimatedCheckBox/>
-        </Box>
-        <Box bg={useColorModeValue('red.500', 'yellow.500')} p={10}>
-          <Text>Hello</Text>
-        </Box>
-        <ToggleSupport/>
+        {/* <TaskItem isDone={checked} onToggleCheckbox={handlePressCheckbox} /> */}
+        <ThemeToggle />
+
+        <Text>Hello hello</Text>
       </VStack>
     </Center>
-  );
+  )
 }
