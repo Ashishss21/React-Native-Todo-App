@@ -1,10 +1,11 @@
 import React, { useState, useCallback } from 'react'
-import { VStack, Text, Fab, Icon, useColorModeValue } from 'native-base';
+import { VStack, Text, Fab, Icon, useColorModeValue } from 'native-base'
 import { AntDesign } from '@expo/vector-icons'
 import shortid from 'shortid'
 import AnimatedColorBox from '../components/AnimatedColorBox'
 import HeroHeader from '../components/HeroHeader'
 import Navbar from '../components/Navbar'
+import TaskList from '../components/TaskList'
 
 const initialData = [
   {
@@ -88,7 +89,17 @@ export default function HomeScreen() {
         borderTopLeftRadius="20px"
         borderTopRightRadius="20px"
         pt="20px"
-      ></VStack>
+      >
+        <TaskList
+          data={data}
+          onToggleItem={handleToggleTaskItem}
+          onChangeSubject={handleChangeTaskItemSubject}
+          onFinishEditing={handleFinishEditingTaskItem}
+          onPressLabel={handlePressTaskItemLabel}
+          onRemoveItem={handleRemoveItem}
+          editingItemId={editingItemId}
+        />
+      </VStack>
       <Fab
         position="absolute"
         renderInPortal={false}
