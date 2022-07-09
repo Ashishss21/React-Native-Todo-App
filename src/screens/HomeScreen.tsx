@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import { Center, VStack, Text } from 'native-base';
 import ThemeToggle from '../components/ThemeToggle';
+import TaskItem from '../components/TaskItem';
 
 export default function HomeScreen() {
+  const [checked, setChecked] = useState(false)
+  const handlePressCheckbox = useCallback(() => {
+    setChecked(prev => !prev)
+  }, [])
   return (
     <Center
       _dark={{ bg: 'blueGray.900' }}
@@ -11,10 +16,8 @@ export default function HomeScreen() {
       flex={1}
     >
       <VStack space={5} alignItems="center">
-        {/* <TaskItem isDone={checked} onToggleCheckbox={handlePressCheckbox} /> */}
+        <TaskItem isDone={checked} onToggleCheckbox={handlePressCheckbox} />
         <ThemeToggle />
-
-        <Text>Hello hello</Text>
       </VStack>
     </Center>
   )

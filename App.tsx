@@ -1,11 +1,11 @@
 import React from 'react'
 import AppContainer from './src/components/AppContainer'
-import HomeScreen from './src/screens/HomeScreen'
+import Navigator from './src'
 
 export default function App() {
   return (
     <AppContainer>
-      <HomeScreen/>
+      <Navigator/>
     </AppContainer>
   )
 }
