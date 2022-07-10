@@ -51,7 +51,7 @@ const Sidebar = (props: DrawerContentComponentProps) => {
           />
         </HStack>
         <Avatar
-          source={require('../assets/profile-image.png')}
+          source={require('../assets/profile.png')}
           size="xl"
           borderRadius={100}
           mb={6}
@@ -59,19 +59,19 @@ const Sidebar = (props: DrawerContentComponentProps) => {
           borderWidth={3}
         />
         <Heading mb={4} size="xl">
-          Ashish Sengar
+          Takuya Matsuyama
         </Heading>
         <MenuButton
           active={currentRoute === 'Main'}
           onPress={handlePressMenuMain}
-          icons="inbox"
+          icon="inbox"
         >
           Tasks
         </MenuButton>
         <MenuButton
           active={currentRoute === 'About'}
           onPress={handlePressMenuAbout}
-          icons="info"
+          icon="info"
         >
           About
         </MenuButton>

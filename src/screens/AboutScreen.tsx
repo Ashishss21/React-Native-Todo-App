@@ -53,7 +53,7 @@ const AboutScreen = () => {
                 Visit my portfolio website
               </LinkButton>
               <LinkButton
-                colorScheme={useColorModeValue('blue', 'darkBlue')}
+                colorScheme={useColorModeValue('blue', '')}
                 size="lg"
                 borderRadius="full"
                 href="https://www.linkedin.com/in/ashish-sengar212/"

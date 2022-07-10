@@ -4,12 +4,12 @@ import { Feather } from '@expo/vector-icons'
 
 interface Props extends IButtonProps {
   active: boolean
-  icons: string
+  icon: string
   children: React.ReactNode
 }
 
-const MenuButton = ({ active, icons, children, ...props }: Props) => {
-  const colorScheme = useColorModeValue('blue', 'darkblue')
+const MenuButton = ({ active, icon, children, ...props }: Props) => {
+  const colorScheme = useColorModeValue('blue', 'darkBlue')
   const inactiveTextColor = useColorModeValue('blue.500', undefined)
   const pressedBgColor = useColorModeValue('primary.100', 'primary.600')
 
@@ -26,7 +26,7 @@ const MenuButton = ({ active, icons, children, ...props }: Props) => {
       }}
       variant="solid"
       justifyContent="flex-start"
-      leftIcon={<Icon as={Feather} name={icons} size="sm" opacity={0.5} />}
+      leftIcon={<Icon as={Feather} name={icon} size="sm" opacity={0.5} />}
       {...props}
     >
       {children}

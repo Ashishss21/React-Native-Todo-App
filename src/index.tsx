@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator()
 const App = () => {
   return (
     <Drawer.Navigator
-      initialRouteName="Home"
+      initialRouteName="Main"
       drawerContent={props => <Sidebar {...props} />}
       screenOptions={{
         headerShown: false,
@@ -17,7 +17,7 @@ const App = () => {
         overlayColor: '#00000000'
       }}
     >
-      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Main" component={HomeScreen} />
       <Drawer.Screen name="About" component={AboutScreen} />
     </Drawer.Navigator>
   )
